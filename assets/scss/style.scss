@@ -1,26 +1,16 @@
-//SAS-UTILS
-
-@import './sass-utils/sass-utils';
 
 //BASE
-@import './base/base';
-//PAGES
-
-@import './pages/pages';
-
-
+@forward 'base';
 //COMPONENTS
-@import 'components/buttons.scss';
-@import 'components/dropdown.scss';
-
+@forward 'components';
 //LAYOUT
-@import 'layout/_footer.scss';
-@import 'layout/_header.scss';
-@import 'layout/_forms';
-@import 'layout/_navigation';
+@forward 'layout';
 
+//PAGES
+@forward 'pages';
+
+//SAS-UTILS
+@forward 'sass-utils';
 //VENDORS
-@import 'vendors/bootstrap';
-@import 'vendors/jquery-ui';
-
+@forward 'vendors';
 
