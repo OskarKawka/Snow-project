@@ -1,5 +1,8 @@
+@use '../sass-utils/index' as u;
+
+
 body {
-    font-family: Arial, Halvetica, sans-serif;
+    font-family: u.$font;
     color:var(--text-color-white);
     background-color: var(--background-color);
 }
