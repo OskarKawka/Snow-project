@@ -1,8 +1,9 @@
-@use '../sass-utils/index' as u;
+@use '../sass-utils' as u;
 
 
 body {
-    font-family: u.$font;
+    font-family: u.$play;
+    letter-spacing: 1px;
     color:var(--text-color-white);
     background-color: var(--background-color);
 }
