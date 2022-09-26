@@ -1,8 +1,43 @@
-.first {
-    &__sub-title span {
-        color:yellow;
+@use '../sass-utils/variables';
+
+.new-branding  {
+
+    background-image: url(../assets/images/CVupdateENG.jpg);
+    background-size:cover;
+    background-position: center center;
+    height:500px;
+
+    & .container {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content:center;
+        height:100%;
     }
-    &__icon {
+    
+    &__caps, &__big--white, &__big--italic {
+        text-align: center;
+        color:var(--text-color-white);
 
     }
+    &__caps {
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 500;
+        margin:20px;
+        font-family: variables.$work;
+    }
+
+    &__big--white {
+        font-size:40px;
+        font-weight:600;
+    }
+    &__big--italic {
+        font-style: italic;
+        font-weight:100;
+    }
+
+
+
+
 }
