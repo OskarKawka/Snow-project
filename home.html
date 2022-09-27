@@ -23,11 +23,13 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7cWork+Sans:400,500,700"
         rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
 
-    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" type="text/css" href="dist/style.css">
+    <link rel="stylesheet" type="text/css" href="dist/lightbox.min.css">
 
     <!-- END: Styles -->
-    
+    <script src="assets/js/lightbox-plus-jquery.min.js"></script>
 
 
 </head>
@@ -41,8 +43,7 @@
                 <img class="header__logo__img" src="assets/images/logo-light.png" alt="Snow logo">
             </div>
             <div class="nav-bar">
-                <!-- WSTAWIC IKONE BARS  -->
-                <img class="nav-bar__img" src="" alt="">
+                <i class="fa-solid fa-bars"></i>
                 <nav class='nav-bar__nav'>
                     <ul>
                         <li>Home</li>
@@ -69,10 +70,13 @@
                         <span>you publish on web</span> 
                     </div>
                 </h1>
+                <div class='new-branding__icon'>
+                     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+                
+                </div>
             </div>
 
-                <!-- ---WSTAWIC IKONE--- -->
-                <img src="" alt="" class='centered-title__icon'>
+           
         </section>
 
         <section class='about container'>
@@ -80,60 +84,81 @@
             <p>We are a new design studio based in SA. We have over 20 years of combined experience, and know a ting or
                 two about designing websites and mobile apps. Clever use of technology and lean processes enable us to
                 work faster and smarter</p>
-            <!-- ---WSTAWIC IKONE--- -->
-            <img src="" class='about__icon-signatre' alt="">
+            <img src="assets/images/logo.svg">
 
         </section>
 
-        <section class='icon-list container'>
-            <!-- ---WSTAWIC IKONE--- -->
-            <div class='icon-list__box'>
-                <div class='icon-list__icon-div'>
-                    <img class='icon-list__img'  src="" alt="">
+        <section class='icon-list'>
+            <div class='container'>
+                <div class='icon-list__box col-3'>
+                    <div class='icon-list__icon-div'>
+                        <i class="fa-solid fa-suitcase"></i>
+                    </div>
+                    <div class='icon-list__icon-desc'>
+                        548<br>
+                        PROJECTS COMPLETED
+                    </div>
+             </div>
+               <div class='icon-list__box col-3'>
+                 <div class='icon-list__icon-div'>
+                       <i class="fa-regular fa-clock"></i>
+                  </div>
+                   <div class='icon-list__icon-desc'>
+                     1465<br>
+                     WORKING HOURS
+                  </div>
+             </div>
+              <div class='icon-list__box col-3'>
+                 <div class='icon-list__icon-div'>
+                       <i class="fa-regular fa-star"></i>
+                    </div>
+                 <div class='icon-list__icon-desc'>
+                        612<br>
+                       POSITIVE FEEDBACK
+                  </div>
+             </div>
+             <div class='icon-list__box col-3'>
+                   <div class='icon-list__icon-div'>
+                       <i class="fa-regular fa-heart"></i>
+                    </div>
+                 <div class='icon-list__icon-desc'>
+                        735<br>
+                        HAPPY CLIENTS
+                 </div>
                 </div>
-                <div class='icon-list__icon-desc'>
-                    548<br>
-                    PROJECTS COMPLETED
-                </div>
-          <div class='icon-list__box'>
-                <div class='icon-list__icon-div'>
-                    <img class='icon-list__img'  src="" alt="">
-                </div>
-                <div class='icon-list__icon-desc'>
-                    1465<br>
-                    WORKING HOURS
-                </div>
-          <div class='icon-list__box'>
-                <div class='icon-list__icon-div'>
-                    <img class='icon-list__img'  src="" alt="">
-                </div>
-                <div class='icon-list__icon-desc'>
-                    612<br>
-                    POSITIVE FEEDBACK
-                </div>
-          <div class='icon-list__box'>
-                <div class='icon-list__icon-div'>
-                    <img class='icon-list__img'  src="" alt="">
-                </div>
-                <div class='icon-list__icon-desc'>
-                    735<br>
-                    HAPPY CLIENS
-                </div>
+            </div>
         </section>
-        <section class='centered-title container'>
-            <h2 class="centered-title__big--dark">Best Projects</h2>
+        <section class='best'>
+            <div class='container'>
+            <h2 class="best__big--dark">Best Projects</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida, arcu id dignissim vestibulum,
                 ex quam dictum turpis, quis vulputate est ante a dui. Duis a tempor lectus, ac ultricies mauris. Mauris
                 quis dolor vitae ex viverra aliquet.</p>
-            <div class='gallery'>
+            <div class='best__gallery'>
                
 
                     <!-- GALERIA JQUERY -->
+               <a href=""> <img src="assets/images/phone-gallery.jpg" alt="" id="1"></a>
+               <a href=""><img src="assets/images/PARACHUTESVINYL_1200x1200.png" alt="" id="2"></a>
+                <a href=""><img src="assets/images/magazine.jpg" alt="" id="3"></a>
+                <a href=""><img src="assets/images/yellow-bag.jpg" alt="" id="4"></a>
+                <a href=""><img src="assets/images/shoppng-bag.jpg" alt="" id="5"></a>
+                <a href=""><img src="assets/images/bottle.jpg" alt="" id="6"></a>
+                <a href=""><img src="assets/images/tshirt.jpg" alt="" id="7"></a>
+                <a href=""><img src="assets/images/coco.jpg" alt="" id="8"></a>
+                <a href=""><img src="assets/images/glass.png" alt="" id="9"></a>
+
+
+
+
 
 
 
 
             </div>
+            
+            </div>
+        </section>
         <section class='centered-title--desc-slider container'>
             <div class='text-slider-container'>
                 <input type="radio" class="radio" name="blackquotes" id="txt-radio-1">
