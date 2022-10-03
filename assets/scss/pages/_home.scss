@@ -135,26 +135,20 @@ i {
 .testimonial {
     background-image: url('../../assets/images/black-bg-pattern.jpg');
     background-size:cover;
-    padding:60px 0;
-    width:100%;
-    padding:0;
-    margin:0;
+    
     
 
   
     &__content {
-        position:relative;
-        max-width:900px;
-        width:100%;
-        display:flex;
-        justify-content: center;
-        align-items:center;
+        
     }
 
     &__slide {
         text-align:center;
         font-family: variables.$play;
         color:var(--text-color-white);
+        
+
         display: -webkit-box;
         display: -ms-flexbox;
         display: -webkit-flex;
@@ -175,6 +169,7 @@ i {
             font-size:20px;
             font-weight:200;
             letter-spacing:2px;
+            padding:0 160px;
         }
     }
 
@@ -186,8 +181,5 @@ i {
      
 }
 
-.swiper {
-    margin-left: auto;
-    margin-right: auto;
-  }
+
 
