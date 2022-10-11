@@ -170,5 +170,65 @@ i {
     }
 }
 
+.contact {
+    & .contact-info {
+        max-width:500px;
+        
+        &__title {
+            font-size:35px;
+            font-weight:bold;
+            font-family:variables.$play;
+        }
+        &__desc {
+            font-size:15px;
+            color:rgb(110, 110, 110);
+            font-family:variables.$work;
+            padding:20px 0;
+        }
+        & a.link {
+            color:unset;
+            text-decoration:none;
+            font-size:15px;
+
+            & div {
+                margin:20px 0;
+            }
+        }
+
+        & span.bold {
+            font-weight:600;
+        }
+    }
+
+    & .form {
+        & ul {
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        & li {
+            width:100%;
+        }
+        & input, & textarea {
+            width:100%;
+        }
+        li.form__name, li.form__mail {
+            width:45%;
+        }
+        &__msg {
+            padding-bottom:10px;
+
+            & textarea {
+                height:200px
+            }
+        }
+    }
+
+
+}
+
 
 
