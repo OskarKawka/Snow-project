@@ -76,7 +76,7 @@ i {
         }   
 }
 .icon-list {
-    background-image: url('../../assets/images/black-bg-pattern.jpg');
+    background-image: url('../../assets/images/bg-pattern.jpg');
     background-size:cover;
     padding:60px 0;
 
@@ -133,7 +133,7 @@ i {
 }
 
 .testimonial {
-    background-image: url('../../assets/images/black-bg-pattern.jpg');
+    background-image: url('../../assets/images/bg-pattern.jpg');
     background-size:cover;
     
     
@@ -157,7 +157,7 @@ i {
 }
 
 .partners {
-
+    padding: 50px 0;
     &__logo-box {
         display:flex;
         flex-direction: row;
@@ -171,6 +171,8 @@ i {
 }
 
 .contact {
+    background-color:rgb(227, 224, 224);
+    padding: 50px 0;
     & .contact-info {
         max-width:500px;
         
@@ -198,6 +200,9 @@ i {
         & span.bold {
             font-weight:600;
         }
+        & span.data {
+            color:rgb(110, 110, 110);
+        }
     }
 
     & .form {
@@ -214,7 +219,15 @@ i {
         }
         & input, & textarea {
             width:100%;
+            padding:10px;
+            border:none;
+            border-radius:0%;
         }
+        & input::placeholder, & textarea::placeholder {
+            color:rgba(70, 70, 70, 0.781);
+            font-size:15px;
+        } 
+
         li.form__name, li.form__mail {
             width:45%;
         }
@@ -230,5 +243,70 @@ i {
 
 }
 
+.links {
+    background-image: url('../../assets/images/bg-pattern.jpg');
+    background-size:cover;
+    padding:60px 0 0 0;
+
+    & > div {
+        padding-bottom:50px;
+    }
+
+    &__title {
+        font-size:25px;
+        color:var(--text-color-white);
+        font-family: variables.$play;
+        font-weight:400;
+        margin-bottom:30px;
+    }
+    &__desc {
+        color:var(--text-color-white);
+        font-family: variables.$play;
+        font-weight:400;
+        font-size:15px;
+    }
+    &__social-icons ul {
+        padding:0;
+        display:flex;
+        flex-direction: row;
+        & li {
+            width: auto;
+            padding-right: 5px;;
+        }
+    }
+    &__tweet-row {
+        display: flex;
+        flex-direction:row;
+    }
+    &__tweet-icon {
+        width:auto;
+        padding-right:10px;
+    }
+    &__insta {
+        display: flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content: flex-start;
+    }
+    &__insta-img img {
+        width:90px;
+        height:90px;
+        object-fit:cover;
+        margin:3px;
+    }
+
+    & .autor {
+        padding: 30px 0;
+        &__text {
+            border-top:1px solid rgba(255, 255, 255, 0.428);
+            padding-top:40px;
+            text-align: center;
+            color:var(--text-color-white);
+            font-size: 15px;
+            font-weight: 200;
+
+        }
+    }
+}
 
 
