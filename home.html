@@ -37,19 +37,20 @@
 
     <header>
 
-        <section class='header container'>
+        <section class='header'>
             <div class='header__logo'>
                 <img class="header__logo__img" src="assets/images/logo-light.png" alt="Snow logo">
             </div>
-            <div class="nav-bar">
-                <i class="fa-solid fa-bars"></i>
-                <nav class='nav-bar__nav'>
+            <div class="header__nav-bar">
+                <i class="fa-solid fa-bars menu-trigger"></i>
+                <nav>
                     <ul>
-                        <li>Home</li>
-                        <li>Portfolio</li>
-                        <li>Blog</li>
-                        <li>Single post</li>
-                        <li>Single work</li>
+                       <a href="#home"><li>Home</li></a> 
+                        <a href="#about"><li>About</li></a>
+                        <a href="#gallery"><li>Gallery</li></a>
+                        <a href="#testimonials"><li>Testimonials</li></a>
+                        <a href="#partners"><li>Partners</li></a>
+                        <a href="#contact"><li>Contact</li></a>
                     </ul>
                 </nav>
             </div>
@@ -57,7 +58,7 @@
     </header>
 
     <main>
-        <section class='new-branding'>
+        <section class='new-branding' id="home">
             <div class="container">
                 <h2 class="new-branding__caps"       >
                     NEW BRANDING AGENCY
@@ -69,16 +70,12 @@
                         <span>you publish on web</span> 
                     </div>
                 </h1>
-                <div class='new-branding__icon'>
-                     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-                
-                </div>
             </div>
 
            
         </section>
 
-        <section class='about container'>
+        <section class='about container' id="about">
             <h2 class='about__big--dark'>About Our Agency</h2>
             <p>We are a new design studio based in SA. We have over 20 years of combined experience, and know a ting or
                 two about designing websites and mobile apps. Clever use of technology and lean processes enable us to
@@ -127,7 +124,7 @@
                 </div>
             </div>
         </section>
-        <section class='best'>
+        <section class='best' id="gallery">
             <div class='container'>
             <h2 class="best__big--dark">Best Projects</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida, arcu id dignissim vestibulum,
@@ -146,9 +143,8 @@
             </div>        
             </div>
         </section>
-        <section class='slider'>
+        <section class='slider' id="testimonials">
             <div class="hero">
-                <h1>Testimonials</h1>
                 <div class="cont">
                     <div class="indicator">
                         <span class="btnn active"></span>
@@ -198,7 +194,7 @@
 
 
 
-        <section class="partners">
+        <section class="partners" id="partners">
             <div class="container">
                 <div class="partners__logo-box">
                     <img class="partners__logo" src="assets/images/logo-typical.jpg" alt="logo">
@@ -213,7 +209,7 @@
     </main>
 
     <footer>
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="container">
                 <div class="row">
                     <div class="contact-info col-6">
