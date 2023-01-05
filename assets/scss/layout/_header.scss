@@ -22,13 +22,24 @@
     &__nav-bar {
         width:50%;
         text-align:right;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;
 
         & i {
             font-size:1.5em;
+            padding:10px;
+        }
+        & ul {
+            padding:0;
         }
 
         & nav {
-            
+            display:none;
+            padding:10px;
+            border-right:1px solid #FFF;
+            border-bottom:1px solid #FFF;
+            width:125px;
         }
         & a {
             text-decoration: none;
