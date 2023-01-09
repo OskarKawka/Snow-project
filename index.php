@@ -1,106 +1,40 @@
-<!DOCTYPE html>
+<?php get_header();?>
 
-
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>Snow | One Page Agency</title>
-
-    <meta name="description" content="Snow">
-    <meta name="keywords" content="portfolio, clean, minimal, blog, template, portfolio website">
-    <meta name="author" content="nK">
-
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- START: Styles -->
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7cWork+Sans:400,500,700"
-        rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <link rel="stylesheet" type="text/css" href="dist/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/scss/lightbox.min 11.15.11.css">
-    <!-- END: Styles -->
-    <script src="assets/js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
-
-
-</head>
-
-<body>
-
-    <header>
-
-        <section class='header'>
-            <div class='header__logo'>
-                <img class="header__img" src="assets/images/logo-light.png" alt="Snow logo">
+<main>
+    <div class="container">
+        <div class="row">
+            <div id="content">
+                <section>
+                <?php if ( have_posts() ) : ?>
+<?php while ( have_posts() ) : the_post(); ?>
+  <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="post-header">
+       <div class="date"><?php the_time( 'M j y' ); ?></div>
+       <h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+       <div class="author"><?php the_author(); ?></div>
+    </div><!--end post header-->
+    <div class="entry clear">
+       <?php if ( function_exists( 'add_theme_support' ) ) the_post_thumbnail(); ?>
+       <?php the_content(); ?>
+       <?php edit_post_link(); ?>
+       <?php wp_link_pages(); ?> </div>
+    <!--end entry-->
+    <div class="post-footer">
+       <div class="comments"><?php comments_popup_link( 'Leave a Comment', '1 Comment', '% Comments' ); ?></div>
+    </div><!--end post footer-->
+    </div><!--end post-->
+<?php endwhile; /* rewind or continue if all posts have been fetched */ ?>
+    <div class="navigation index">
+       <div class="alignleft"><?php next_posts_link( 'Older Entries' ); ?></div>
+       <div class="alignright"><?php previous_posts_link( 'Newer Entries' ); ?></div>
+    </div><!--end navigation-->
+<?php else : ?>
+<?php endif; ?>
+                </section>
             </div>
-            <div class="header__nav-bar">
-                <i class="fa-solid fa-bars menu-trigger"></i>
-                <nav class="nav-main">
-                    <ul>
-                        <a href="#home">
-                            <li>Home</li>
-                        </a>
-                        <a href="#about">
-                            <li>About</li>
-                        </a>
-                        <a href="#gallery">
-                            <li>Gallery</li>
-                        </a>
-                        <a href="#testimonials">
-                            <li>Testimonials</li>
-                        </a>
-                        <a href="#partners">
-                            <li>Partners</li>
-                        </a>
-                        <a href="#contact">
-                            <li>Contact</li>
-                        </a>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-        <section id="popup-menu" class="popup-menu">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="popup-menu__content">
-                            <i class="fa-solid fa-xmark"></i>
-                            <img class="popup-menu__img" src="assets/images/logo-light.png" alt="Snow logo">
-                            <nav class="nav-main">
-                                <ul>
-                                    <a href="#home">
-                                        <li>Home</li>
-                                    </a>
-                                    <a href="#about">
-                                        <li>About</li>
-                                    </a>
-                                    <a href="#gallery">
-                                        <li>Gallery</li>
-                                    </a>
-                                    <a href="#testimonials">
-                                        <li>Testimonials</li>
-                                    </a>
-                                    <a href="#partners">
-                                        <li>Partners</li>
-                                    </a>
-                                    <a href="#contact">
-                                        <li>Contact</li>
-                                    </a>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </header>
+        </div>
+
+    </div>
+
+</main>
+<?php get_footer();?>
