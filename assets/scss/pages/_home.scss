@@ -38,12 +38,19 @@ i {
     &__big--white {
         font-size: 40px;
         font-weight: 600;
+        @media  (max-width:600px) {
+            font-size:30px;
+        }
     }
 
     &__big--italic {
         font-style: italic;
         font-weight: 100;
+        @media  (max-width:600px) {
+            font-size:30px;
+        }
     }
+   
 
     &__icon {
         position: absolute;
